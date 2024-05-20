@@ -221,9 +221,10 @@
 //         Scanner sc = new Scanner(System.in);
 //         System.out.println("Enter a year: ");
 //         int a = sc.nextInt();
+
 //         if((a%4 == 0) && (a%400 == 0)) {
 //             System.out.println(a + " is a century leap year.");
-//         } else if(a%4 == 0) {
+//         } else if((a%4 == 0) && (a%100 != 0)) {
 //             System.out.println(a + " is a leap year.");
 //         } else{
 //             System.out.println(a + " is a normal year.");
