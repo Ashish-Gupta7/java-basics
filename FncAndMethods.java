@@ -58,3 +58,50 @@
 //         System.out.println(prod);
 //     }
 // }
+
+// Factorial of a number, n
+// import java.util.Scanner;
+// public class FncAndMethods {
+//     public static int factorial(int a) {
+//         int f = 1;
+//         for(int i = 1; i <= a; i++) {
+//             f *= i;
+//         }
+//         return f;
+//     }
+//     public static void main(String args[]) {
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         int res = factorial(a);
+//         System.out.println(res);
+//     }
+// }
+
+// Binomial Coefficient => nCr = n!/r!(n-r)!
+import java.util.Scanner;
+public class FncAndMethods {
+    public static int factorial(int n) {
+        int f = 1;
+        for(int i = 1; i <= n; i++) {
+            f *= i;
+        }
+        return f;
+    }
+
+    public static int binomial(int n, int r) {
+        int nf = factorial(n);
+        int rf = factorial(r);
+        int nMinusR = factorial(n-r);
+        
+        int nCr = nf/(rf*nMinusR);
+        return nCr;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int r = sc.nextInt();
+        int res = binomial(n, r);
+        System.out.println(res);
+    }
+}
