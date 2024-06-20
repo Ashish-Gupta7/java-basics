@@ -160,3 +160,70 @@
 //         System.out.println(isPrime(61));
 //     }
 // }
+
+// Print all primes in a range
+// import java.util.Scanner;
+// public class FncAndMethods {
+//   public static boolean isPrime(int n) {
+//       if(n == 2) {
+//           return false;
+//       }
+//       for(int i = 2; i <= Math.sqrt(n); i++) {
+//           if(n % i == 0) {
+//               return false;
+//           }
+//       }
+//       return true;
+//   }
+//   public static void primeRange(int n) {
+//     for(int i = 2; i <= n; i++) {
+//       if(isPrime(i)) {
+//         System.out.print(i + " ");
+//       }
+//     }
+//   }
+//   public static void main(String args[]) {
+//     Scanner sc = new Scanner(System.in);
+//     System.out.print("Enter a number: ");
+//     int n = sc.nextInt();
+//     primeRange(n);
+//   }
+// }
+
+// Convert from binary to decimal
+// public class FncAndMethods {
+//   public static void binToDec(int n) {
+//     int binNum = n;
+//     int dec = 0;
+//     int pow = 0;
+//     while(binNum > 0) {
+//       int lastDigit = binNum % 10;
+//       dec = dec + (lastDigit * (int) (Math.pow(2, pow)));
+//       pow++;
+//       binNum = binNum / 10;
+//     }
+//     System.out.println("Decimal of " + n + " = " + dec);
+//   }
+//   public static void main(String args[]) {
+//     binToDec(11011001);
+//   }
+// }
+
+// Convert from decimal to binary
+// public class FncAndMethods {
+//   public static void decToBin(int n) {
+//     int decNum = n;
+//     int binNum = 0;
+//     int pow = 0;
+//     while(n > 0) {
+//       int rem = n % 2;
+//       binNum = binNum + (rem * (int) (Math.pow(10, pow)));
+//       pow++;
+//       n = n / 2;
+//     }
+//     System.out.println("Binary of " + decNum + " = " + binNum);
+//   }
+//   public static void main(String args[]) {
+//     decToBin(1024);
+//   }
+// }
