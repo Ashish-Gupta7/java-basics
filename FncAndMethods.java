@@ -78,30 +78,85 @@
 // }
 
 // Binomial Coefficient => nCr = n!/r!(n-r)!
-import java.util.Scanner;
-public class FncAndMethods {
-    public static int factorial(int n) {
-        int f = 1;
-        for(int i = 1; i <= n; i++) {
-            f *= i;
-        }
-        return f;
-    }
+// import java.util.Scanner;
+// public class FncAndMethods {
+//     public static int factorial(int n) {
+//         int f = 1;
+//         for(int i = 1; i <= n; i++) {
+//             f *= i;
+//         }
+//         return f;
+//     }
 
-    public static int binomial(int n, int r) {
-        int nf = factorial(n);
-        int rf = factorial(r);
-        int nMinusR = factorial(n-r);
+//     public static int binomial(int n, int r) {
+//         int nf = factorial(n);
+//         int rf = factorial(r);
+//         int nMinusR = factorial(n-r);
         
-        int nCr = nf/(rf*nMinusR);
-        return nCr;
-    }
+//         int nCr = nf/(rf*nMinusR);
+//         return nCr;
+//     }
 
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int r = sc.nextInt();
-        int res = binomial(n, r);
-        System.out.println(res);
-    }
-}
+//     public static void main(String args[]) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         int r = sc.nextInt();
+//         int res = binomial(n, r);
+//         System.out.println(res);
+//     }
+// }
+
+// Function overloading -> fnc name same but diff params
+// public class FncAndMethods {
+//     public static int sum(int a, int b) {
+//         return a+b;
+//     }
+//     public static int sum(int a, int b, int c) {
+//         return a+b+c;
+//     }
+//     public static float sum(float a, float b) {
+//         return a+b;
+//     }
+//     public static void main(String args[]) {
+//         System.out.println(sum(4, 5));
+//         System.out.println(sum(4, 5, 9));
+//         System.out.println(sum(4.3f, 5.3f));
+//     }
+// }
+
+// check if number is prime or not ?
+// public class FncAndMethods {
+//     public static boolean isPrime(int n) {
+//         if(n == 2) {
+//             return true;
+//         }
+
+//         for(int i = 2; i < n; i++) {
+//             if(n % i == 0) {
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+//     public static void main(String args[]) {
+//         System.out.println(isPrime(2));
+//     }
+// }
+
+// check if number is prime or not ? optimised method.
+// public class FncAndMethods {
+//     public static boolean isPrime(int n) {
+//         if(n == 2) {
+//             return false;
+//         }
+//         for(int i = 2; i <= Math.sqrt(n); i++) {
+//             if(n % i == 0) {
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+//     public static void main(String args[]) {
+//         System.out.println(isPrime(61));
+//     }
+// }
